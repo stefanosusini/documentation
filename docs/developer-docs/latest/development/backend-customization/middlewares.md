@@ -16,6 +16,7 @@ In Strapi, 2 middleware concepts coexist:
 - **Route middlewares** have a more limited scope and are configured and used as middlewares at the route level. They are described in the [routes documentation](/developer-docs/latest/development/backend-customization/routing.md#middlewares).
 
 :::
+
 ## Implementation
 
 <!-- ? do we plan to add middleware creation to the strapi generate interactive CLI? -->
