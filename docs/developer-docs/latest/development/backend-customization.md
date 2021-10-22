@@ -52,7 +52,12 @@ As a developer, you can manually add policies, and they can also be added by the
 
 Usually middlewares are mostly used for logging, caching, debuging, error handling, and security purposes.
 
-Strapi middlewares are functions that are composed and executed in a stack-like manner upon request. They are based on [Koa](https://koajs.com/)'s middleware stack.
+In Strapi, 2 middleware concepts coexist:
+
+- Strapi middlewares are [configured and enabled](/developer-docs/latest/setup-deployment-guides/configurations/required/middlewares.md) as global middlewares for the entire Strapi server application,
+- while [route middlewares](/developer-docs/latest/development/backend-customization/routes.md#middlewares) have a more limited scope and are used as middlewares for a [route](#routes).
+
+Middlewares are functions that are composed and executed in a stack-like manner upon request. They are based on [Koa](https://koajs.com/)'s middleware stack.
 
 ## Controllers
 
@@ -70,7 +75,7 @@ In most cases, the controllers will contain the bulk of a project's business log
 
 At the end of the flow, Strapi [controllers](#controllers) send a response to a [request](#requests).
 
-Strapi's is based on Koa, so responses are based on [Koa's response object](https://koajs.com/#response), which are an abstraction on top of [node's response object](https://nodejs.org/api/http.html#http_class_http_serverresponse).
+Strapi is based on Koa, so responses are based on [Koa's response object](https://koajs.com/#response), which are an abstraction on top of [node's response object](https://nodejs.org/api/http.html#http_class_http_serverresponse).
 
 In Strapi, the context object (i.e. `ctx`) contains a list of values and functions useful to manage server responses. They are accessible through `ctx.response`, from [controllers](#controllers) and [policies](#policies).
 
