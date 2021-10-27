@@ -34,7 +34,7 @@ Errors thrown by the REST API are included in the [response](/developer-docs/lat
 
 <!-- TODO: add "types" (aka error `name`) list once settled -->
 
-### GraphQL
+### GraphQL errors
 
 Errors thrown by the GraphQL API are included in the [response](/developer-docs/latest/developer-resources/database-apis-reference/graphql-api.html#unified-response-format) that has the following format:
 
@@ -56,6 +56,6 @@ Errors thrown by the GraphQL API are included in the [response](/developer-docs/
 
 ## Throwing errors
 
-The recommended way to throw errors when developing any custom logic with Strapi is to have the [controller](/developer-docs/latest/development/backend-customization/controllers.md) add a `badRequest` object to the [Koa's](https://koajs.com/#context) context. This `ctx.badRequest` object should contain error information that follows the proper format (see [receiving errors](#receiving-errors)).
+The recommended way to throw errors when developing any custom logic with Strapi is to have the [controller](/developer-docs/latest/development/backend-customization/controllers.md) add a `badRequest` object to the context (i.e. `ctx`) based on [Koa's](https://koajs.com/#context) context. This `ctx.badRequest` object should contain error information that follows the proper format (see [receiving errors](#receiving-errors)).
 
 [Services](/developer-docs/latest/development/backend-customization/services.md) don't have access to the controller's `ctx` object. If services need to throw errors, these need to be caught by the controller, that in turn is in charge of sending the proper `ctx.badRequest` along with the response.
