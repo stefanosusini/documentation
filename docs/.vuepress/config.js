@@ -59,6 +59,7 @@ const sidebar = {
               collapsable: true,
               children: [
                 ['/developer-docs/latest/setup-deployment-guides/configurations/optional/functions.md', 'Functions'],
+                ['/developer-docs/latest/setup-deployment-guides/configurations/optional/cronjobs.md', 'Cron jobs'],
                 ['/developer-docs/latest/setup-deployment-guides/configurations/optional/api.md', 'API'],
                 ['/developer-docs/latest/setup-deployment-guides/configurations/optional/plugins.md', 'Plugins'],
                 ['/developer-docs/latest/setup-deployment-guides/configurations/optional/environment.md', 'Environment'],
